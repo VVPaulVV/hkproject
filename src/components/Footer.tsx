@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="py-24 md:py-32 bg-antique-text text-white relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-                <img src="/assets/slide_hero.jpg" alt="" className="w-full h-full object-cover scale-150 rotate-3" />
+                <img src="assets/slide_hero.jpg" alt="" className="w-full h-full object-cover scale-150 rotate-3" />
             </div>
 
             <div className="container-custom relative z-10">

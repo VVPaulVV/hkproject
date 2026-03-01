@@ -56,7 +56,7 @@ const Restauration = () => {
                     {/* Menu Section */}
                     <div className="bg-antique-text text-white rounded-[5rem] overflow-hidden relative p-12 md:p-24 shadow-[0_50px_100px_rgba(0,0,0,0.2)]">
                         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
-                            <img src="/assets/la_tavola_mosaic.jpg" alt="" className="w-full h-full object-cover" />
+                            <img src="assets/la_tavola_mosaic.jpg" alt="" className="w-full h-full object-cover" />
                         </div>
 
                         <div className="relative z-10">

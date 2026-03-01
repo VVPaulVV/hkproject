@@ -72,7 +72,7 @@ export const projectData: ProjectSection[] = [
         id: 'concept',
         title: 'LE MICROCOSME ROMAIN',
         icon: Compass,
-        image: '/assets/slide_plan.jpg',
+        image: 'assets/slide_plan.jpg',
         description: "Un hôtel ***** representative du cadre de vie dans la Rome antique. Un microcosme d'une ville romaine alliant modernité et antiquité.",
         subsections: [
             {
@@ -90,7 +90,7 @@ export const projectData: ProjectSection[] = [
         id: 'hebergement',
         title: 'HÉBERGEMENT',
         icon: Bed,
-        image: '/assets/room_suite.jpg',
+        image: 'assets/room_suite.jpg',
         description: '34 unités déclinées en 3 types d’exception, du Cubiculum à la Suite Imperatoria.',
         subsections: [
             {
@@ -108,7 +108,7 @@ export const projectData: ProjectSection[] = [
         id: 'restauration',
         title: 'LA TAVOLA',
         icon: Utensils,
-        image: '/assets/la_tavola_mosaic.jpg',
+        image: 'assets/la_tavola_mosaic.jpg',
         description: "Cuisine romaine et latine inspirée des voyages du Chef en Méditerranée (Alpes, Lombardie, Latium).",
         subsections: [
             {
@@ -133,7 +133,7 @@ export const projectData: ProjectSection[] = [
         id: 'detente',
         title: 'THERMES & THÉÂTRE',
         icon: Waves,
-        image: '/assets/thermes_view.jpg',
+        image: 'assets/thermes_view.jpg',
         description: 'L’équilibre parfait entre le soin du corps et l’élévation de l’esprit.',
         subsections: [
             {

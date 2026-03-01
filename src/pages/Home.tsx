@@ -13,7 +13,7 @@ const Home = () => {
                         initial={{ scale: 1.1 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 2, ease: "easeOut" }}
-                        src="/assets/slide_hero.jpg"
+                        src="assets/slide_hero.jpg"
                         alt="Fortuna Roman Villa"
                         className="w-full h-full object-cover"
                     />
@@ -105,7 +105,7 @@ const Home = () => {
                                 viewport={{ once: true }}
                                 className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]"
                             >
-                                <img src="/assets/slide_map.jpg" alt="Map" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                <img src="assets/slide_map.jpg" alt="Map" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9, y: 50 }}
@@ -114,7 +114,7 @@ const Home = () => {
                                 transition={{ delay: 0.2 }}
                                 className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] mt-12"
                             >
-                                <img src="/assets/slide_mural.jpg" alt="Mural" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                <img src="assets/slide_mural.jpg" alt="Mural" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                             </motion.div>
                             <div className="absolute inset-0 -z-10 bg-primary/10 rounded-full blur-[100px] opacity-30" />
                         </div>
@@ -130,10 +130,10 @@ const Home = () => {
                 </div>
                 <div className="container-custom grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { id: 'concept', title: 'Le Microcosme', img: '/assets/slide_plan.jpg', part: 'I' },
-                        { id: 'hebergement', title: 'Hébergement', img: '/assets/room_suite.jpg', part: 'II' },
-                        { id: 'restauration', title: 'La Tavola', img: '/assets/la_tavola_mosaic.jpg', part: 'III' },
-                        { id: 'detente', title: 'Thermes & Théâtre', img: '/assets/thermes_view.jpg', part: 'IV' },
+                        { id: 'concept', title: 'Le Microcosme', img: 'assets/slide_plan.jpg', part: 'I' },
+                        { id: 'hebergement', title: 'Hébergement', img: 'assets/room_suite.jpg', part: 'II' },
+                        { id: 'restauration', title: 'La Tavola', img: 'assets/la_tavola_mosaic.jpg', part: 'III' },
+                        { id: 'detente', title: 'Thermes & Théâtre', img: 'assets/thermes_view.jpg', part: 'IV' },
                     ].map((item, idx) => (
                         <Link
                             key={item.id}
