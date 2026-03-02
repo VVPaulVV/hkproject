@@ -157,7 +157,7 @@ export const projectData: ProjectSection[] = [
     },
     {
         id: 'organigramme',
-        title: 'ORGANI GRAMME',
+        title: 'ORGANIGRAMME',
         icon: Users,
         image: '/assets/slide_hero.jpg',
         description: "L'organisation d'excellence de l'Hôtel Fortuna. Une hiérarchie fluide pour un service impérial.",
