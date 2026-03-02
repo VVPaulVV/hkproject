@@ -6,14 +6,14 @@ const Home = () => {
     return (
         <div className="overflow-hidden">
             {/* Hero Section */}
-            <header className="relative h-screen flex items-center overflow-hidden">
+            <header className="relative h-screen flex items-end pb-32 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-antique-bg z-10" />
                     <motion.img
                         initial={{ scale: 1.1 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 2, ease: "easeOut" }}
-                        src="assets/slide_hero.jpg"
+                        src="/assets/slide_hero.jpg"
                         alt="Fortuna Roman Villa"
                         className="w-full h-full object-cover"
                     />
@@ -105,7 +105,7 @@ const Home = () => {
                                 viewport={{ once: true }}
                                 className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]"
                             >
-                                <img src="assets/slide_map.jpg" alt="Map" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                <img src="/assets/slide_map.jpg" alt="Map" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9, y: 50 }}
@@ -114,7 +114,7 @@ const Home = () => {
                                 transition={{ delay: 0.2 }}
                                 className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] mt-12"
                             >
-                                <img src="assets/slide_mural.jpg" alt="Mural" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                <img src="/assets/slide_mural.jpg" alt="Mural" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                             </motion.div>
                             <div className="absolute inset-0 -z-10 bg-primary/10 rounded-full blur-[100px] opacity-30" />
                         </div>
@@ -128,12 +128,13 @@ const Home = () => {
                     <h2 className="text-antique-text mb-4">EXPLORER L'UNIVERS</h2>
                     <div className="h-1 w-24 bg-primary mx-auto" />
                 </div>
-                <div className="container-custom grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="container-custom grid md:grid-cols-2 lg:grid-cols-5 gap-8">
                     {[
-                        { id: 'concept', title: 'Le Microcosme', img: 'assets/slide_plan.jpg', part: 'I' },
-                        { id: 'hebergement', title: 'Hébergement', img: 'assets/room_suite.jpg', part: 'II' },
-                        { id: 'restauration', title: 'La Tavola', img: 'assets/la_tavola_mosaic.jpg', part: 'III' },
-                        { id: 'detente', title: 'Thermes & Théâtre', img: 'assets/thermes_view.jpg', part: 'IV' },
+                        { id: 'concept', title: 'Le Microcosme', img: '/assets/slide_plan.jpg', part: 'I' },
+                        { id: 'hebergement', title: 'Hébergement', img: '/assets/room_suite.jpg', part: 'II' },
+                        { id: 'restauration', title: 'La Tavola', img: '/assets/la_tavola_mosaic.jpg', part: 'III' },
+                        { id: 'detente', title: 'Thermes & Théâtre', img: '/assets/thermes_view.jpg', part: 'IV' },
+                        { id: 'organigramme', title: 'Organigramme', img: '/assets/slide_hero.jpg', part: 'V' },
                     ].map((item, idx) => (
                         <Link
                             key={item.id}

@@ -6,9 +6,9 @@ const Hebergement = () => {
     const data = projectData.find(s => s.id === 'hebergement')!;
 
     const rooms = [
-        { img: 'assets/room_confort.jpg', title: 'Cubiculum Confort', area: '20m²', price: '450€', icon: Bed },
-        { img: 'assets/room_deluxe.jpg', title: 'Chambre Deluxe', area: '40m²', price: '800€', icon: Star },
-        { img: 'assets/room_suite.jpg', title: 'Suite Imperatoria', area: '60m²', price: '1100€', icon: Shield }
+        { img: '/assets/room_confort.jpg', title: 'Cubiculum Confort', area: '20m²', price: '450€', icon: Bed },
+        { img: '/assets/room_deluxe.jpg', title: 'Chambre Deluxe', area: '40m²', price: '800€', icon: Star },
+        { img: '/assets/room_suite.jpg', title: 'Suite Imperatoria', area: '60m²', price: '1100€', icon: Shield }
     ];
 
     return (

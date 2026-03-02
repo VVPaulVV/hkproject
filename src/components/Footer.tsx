@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="py-24 md:py-32 bg-antique-text text-white relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-                <img src="assets/slide_hero.jpg" alt="" className="w-full h-full object-cover scale-150 rotate-3" />
+                <img src="/assets/slide_hero.jpg" alt="" className="w-full h-full object-cover scale-150 rotate-3" />
             </div>
 
             <div className="container-custom relative z-10">
@@ -49,10 +49,10 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/10">© 2026 FORTUNA LUXURY HOSPITALITY</span>
+                    <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/10">© 2026 FORTUNA</span>
                     <div className="flex gap-10">
-                        <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/10 hover:text-white/30 cursor-pointer">Heritage & Preservation</span>
-                        <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/10 hover:text-white/30 cursor-pointer">Legal Dossier</span>
+                        <Link to="/heritage" className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/10 hover:text-white/30 cursor-pointer transition-colors">Heritage & Preservation</Link>
+                        <Link to="/mentions-legales" className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/10 hover:text-white/30 cursor-pointer transition-colors">Mentions Légales</Link>
                     </div>
                 </div>
             </div>

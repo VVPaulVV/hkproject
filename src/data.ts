@@ -13,6 +13,7 @@ import {
     Coffee,
     Sword,
     Calendar,
+    Users,
 } from 'lucide-react';
 
 export interface ProjectSection {
@@ -35,35 +36,35 @@ export interface ProjectSection {
 
 export const menuData = {
     entrees: [
-        { name: "Ovis opalis", desc: "œufs durs, garniture aux pignons" },
-        { name: "Concicla a la Commodus", desc: "soufflé de petits pois verts" },
-        { name: "Patina de aparagis frigida", desc: "flan d'asperges" },
-        { name: "Scarola napoli", desc: "scarole aux raisins secs" },
-        { name: "Farinata", desc: "galette de pois chiches" },
-        { name: "Burrata ex Apulia", desc: "burrata des Pouilles" },
-        { name: "Frixum lolligo", desc: "encornets frits" },
-        { name: "Sepia cum pisis", desc: "seiches aux petits poids" },
-        { name: "Salade « Cesare »", desc: "" },
+        { name: "Ovis opalis", desc: "œufs durs, garniture aux pignons", price: "9" },
+        { name: "Concicla a la Commodus", desc: "soufflé de petits pois verts", price: "11" },
+        { name: "Patina de aparagis frigida", desc: "flan d'asperges", price: "12" },
+        { name: "Scarola napoli", desc: "scarole aux raisins secs", price: "9" },
+        { name: "Farinata", desc: "galette de pois chiches", price: "12" },
+        { name: "Burrata ex Apulia", desc: "burrata des Pouilles", price: "15" },
+        { name: "Frixum lolligo", desc: "encornets frits", price: "14" },
+        { name: "Sepia cum pisis", desc: "seiches aux petits poids", price: "13" },
+        { name: "Salade « Cesare »", desc: "", price: "16" },
     ],
     plats: [
-        { name: "Acetaria fabarum latarum et pecorini", desc: "salade de fèves et pecorino" },
-        { name: "Boletos", desc: "ragoût de champignons" },
-        { name: "Perna", desc: "jambon en croûte" },
-        { name: "Porcellus Hortulanus", desc: "porcelet à la jardinière" },
-        { name: "Lenticulae cum botulis", desc: "lentilles aux saucisses" },
-        { name: "Bucatini all'amatriciana", desc: "bucatini à la l'amatriciana" },
-        { name: "Gnocchi alla romana", desc: "gnocchi à la romaine" },
-        { name: "Pluma Iberica in aromatibus macerata", desc: "pluma ibérique marinée aux épices" },
-        { name: "Ceviche de Daurade", desc: "" },
+        { name: "Acetaria fabarum latarum et pecorini", desc: "salade de fèves et pecorino", price: "16" },
+        { name: "Boletos", desc: "tourte de ragoût de champignons", price: "19" },
+        { name: "Perna", desc: "jambon en croûte", price: "22" },
+        { name: "Porcellus Hortulanus", desc: "porcelet à la jardinière", price: "22" },
+        { name: "Lenticulae cum botulis", desc: "lentilles aux saucisses", price: "21" },
+        { name: "Bucatini all'amatriciana", desc: "bucatini à la l'amatriciana", price: "22" },
+        { name: "Gnocchi alla romana", desc: "gnocchi à la romaine", price: "22" },
+        { name: "Pluma Iberica in aromatibus macerata", desc: "pluma ibérique marinée aux épices", price: "24" },
+        { name: "Ceviche de Daurade", desc: "", price: "23" },
     ],
     desserts: [
-        { name: "Frigidum coagulum cum melle pomisque", desc: "caillé frais au miel et aux fruits" },
-        { name: "Savillum", desc: "cheese cake romain" },
-        { name: "Patina de piris", desc: "gratin de poires" },
-        { name: "Meli melon", desc: "compote de fruits au miel" },
-        { name: "Puls", desc: "sablé de céréales" },
-        { name: "Tiramisu capulus", desc: "tiramisu au café" },
-        { name: "Panna cotta aux fruits de l'Empire", desc: "" },
+        { name: "Frigidum coagulum cum melle pomisque", desc: "caillé frais au miel et aux fruits", price: "9" },
+        { name: "Savillum", desc: "cheese cake romain", price: "9" },
+        { name: "Patina de piris", desc: "gratin de poires", price: "11" },
+        { name: "Meli melon", desc: "compote de fruits au miel", price: "9" },
+        { name: "Puls", desc: "sablé de céréales", price: "9" },
+        { name: "Tiramisu capulus", desc: "tiramisu au café", price: "11" },
+        { name: "Panna cotta aux fruits de l'Empire", desc: "", price: "9" },
     ]
 };
 
@@ -72,7 +73,7 @@ export const projectData: ProjectSection[] = [
         id: 'concept',
         title: 'LE MICROCOSME ROMAIN',
         icon: Compass,
-        image: 'assets/slide_plan.jpg',
+        image: '/assets/slide_plan.jpg',
         description: "Un hôtel ***** representative du cadre de vie dans la Rome antique. Un microcosme d'une ville romaine alliant modernité et antiquité.",
         subsections: [
             {
@@ -90,7 +91,7 @@ export const projectData: ProjectSection[] = [
         id: 'hebergement',
         title: 'HÉBERGEMENT',
         icon: Bed,
-        image: 'assets/room_suite.jpg',
+        image: '/assets/room_suite.jpg',
         description: '34 unités déclinées en 3 types d’exception, du Cubiculum à la Suite Imperatoria.',
         subsections: [
             {
@@ -108,8 +109,8 @@ export const projectData: ProjectSection[] = [
         id: 'restauration',
         title: 'LA TAVOLA',
         icon: Utensils,
-        image: 'assets/la_tavola_mosaic.jpg',
-        description: "Cuisine romaine et latine inspirée des voyages du Chef en Méditerranée (Alpes, Lombardie, Latium).",
+        image: '/assets/la_tavola_mosaic.jpg',
+        description: "Le Chef vous propose une carte inspirée de ses voyages dans les régions méditerranéennes (Alpes, Lombardie, Latium) et associé à la gastronomie romaine. \n\n L’art de bien boire et bien manger faisait foi dans le monde antique romain. \n\n Laissez-vous, vous transporter à travers la découverte et la dégustation de mets légers et frais.",
         subsections: [
             {
                 id: 'service-info',
@@ -133,7 +134,7 @@ export const projectData: ProjectSection[] = [
         id: 'detente',
         title: 'THERMES & THÉÂTRE',
         icon: Waves,
-        image: 'assets/thermes_view.jpg',
+        image: '/assets/thermes_view.jpg',
         description: 'L’équilibre parfait entre le soin du corps et l’élévation de l’esprit.',
         subsections: [
             {
@@ -153,5 +154,13 @@ export const projectData: ProjectSection[] = [
                 ]
             }
         ]
+    },
+    {
+        id: 'organigramme',
+        title: 'ORGANI GRAMME',
+        icon: Users,
+        image: '/assets/slide_hero.jpg',
+        description: "L'organisation d'excellence de l'Hôtel Fortuna. Une hiérarchie fluide pour un service impérial.",
+        subsections: []
     }
 ];

@@ -63,7 +63,7 @@ const Detente = () => {
 
                     {/* Decorative Section */}
                     <div className="mt-32 rounded-[4rem] overflow-hidden aspect-video relative group shadow-2xl">
-                        <img src="assets/thermes_view.jpg" alt="Thermes" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110" />
+                        <img src="/assets/thermes_view.jpg" alt="Thermes" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110" />
                         <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent p-12 flex flex-col justify-end">
                             <h3 className="text-white text-4xl mb-4">L'Art de Vivre</h3>
                             <p className="text-white/60 text-xl font-serif max-w-2xl">

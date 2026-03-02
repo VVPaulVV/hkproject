@@ -1,10 +1,13 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Concept from './pages/Concept';
 import Hebergement from './pages/Hebergement';
 import Restauration from './pages/Restauration';
 import Detente from './pages/Detente';
+import Organigramme from './pages/Organigramme';
+import MentionsLegales from './pages/MentionsLegales';
+import Heritage from './pages/Heritage';
 
 const App = () => {
   return (
@@ -16,6 +19,9 @@ const App = () => {
           <Route path="hebergement" element={<Hebergement />} />
           <Route path="restauration" element={<Restauration />} />
           <Route path="detente" element={<Detente />} />
+          <Route path="organigramme" element={<Organigramme />} />
+          <Route path="mentions-legales" element={<MentionsLegales />} />
+          <Route path="heritage" element={<Heritage />} />
         </Route>
       </Routes>
     </Router>

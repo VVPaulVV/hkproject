@@ -20,7 +20,7 @@ const Restauration = () => {
             <section className="section-padding pt-0">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center mb-24">
-                        <p className="text-2xl font-serif italic text-antique-text/80 leading-relaxed italic">
+                        <p className="text-2xl font-serif italic text-antique-text/80 leading-relaxed whitespace-pre-wrap">
                             {data.description}
                         </p>
                     </div>
@@ -56,7 +56,7 @@ const Restauration = () => {
                     {/* Menu Section */}
                     <div className="bg-antique-text text-white rounded-[5rem] overflow-hidden relative p-12 md:p-24 shadow-[0_50px_100px_rgba(0,0,0,0.2)]">
                         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
-                            <img src="assets/la_tavola_mosaic.jpg" alt="" className="w-full h-full object-cover" />
+                            <img src="/assets/la_tavola_mosaic.jpg" alt="" className="w-full h-full object-cover" />
                         </div>
 
                         <div className="relative z-10">
@@ -78,9 +78,15 @@ const Restauration = () => {
                                         </h4>
                                         <div className="space-y-10">
                                             {(menuData as any)[cat.key].map((item: any, iIdx: number) => (
-                                                <div key={iIdx} className="group cursor-pointer">
-                                                    <p className="font-header font-bold text-lg text-white group-hover:text-secondary transition-colors uppercase tracking-tight">{item.name}</p>
-                                                    <p className="text-white/30 text-xs font-serif italic mt-2">{item.desc}</p>
+                                                <div key={iIdx} className="group cursor-pointer flex justify-between items-start gap-4">
+                                                    <div>
+                                                        <p className="font-header font-bold text-lg text-white group-hover:text-secondary transition-colors uppercase tracking-tight">{item.name}</p>
+                                                        <p className="text-white/30 text-xs font-serif italic mt-2">{item.desc}</p>
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="h-[1px] w-4 bg-secondary/20 hidden group-hover:block" />
+                                                        <span className="font-header font-bold text-secondary text-lg">{item.price}</span>
+                                                    </div>
                                                 </div>
                                             ))}
                                         </div>
