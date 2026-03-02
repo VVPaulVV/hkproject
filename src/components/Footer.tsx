@@ -19,11 +19,18 @@ const Footer = () => {
                             "Un sanctuaire de l'histoire, redéfini pour le luxe contemporain au bord de la Méditerranée."
                         </p>
                         <div className="flex flex-wrap gap-8">
-                            {['LinkedIn', 'Instagram', 'Dossier PDF'].map(social => (
+                            {['LinkedIn', 'Instagram'].map(social => (
                                 <button key={social} className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/40 hover:text-primary transition-all border-b border-white/10 pb-2 hover:border-primary">
                                     {social}
                                 </button>
                             ))}
+                            <a
+                                href="/Dossier_Fortuna.pdf"
+                                download
+                                className="text-[9px] font-bold tracking-[0.3em] uppercase text-white/40 hover:text-primary transition-all border-b border-white/10 pb-2 hover:border-primary"
+                            >
+                                Dossier PDF
+                            </a>
                         </div>
                     </div>
 

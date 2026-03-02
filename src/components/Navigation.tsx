@@ -45,9 +45,13 @@ const Navigation = () => {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        <button className={`hidden sm:block px-8 py-2.5 border-2 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-500 ${scrolled ? 'border-primary text-primary hover:bg-primary hover:text-white' : 'border-primary text-primary hover:bg-primary hover:text-white'}`}>
+                        <a
+                            href="/Dossier_Fortuna.pdf"
+                            download
+                            className={`hidden sm:block px-8 py-2.5 border-2 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-500 ${scrolled ? 'border-primary text-primary hover:bg-primary hover:text-white' : 'border-primary text-primary hover:bg-primary hover:text-white'}`}
+                        >
                             Le Dossier
-                        </button>
+                        </a>
                         <button
                             className={`lg:hidden p-2 rounded-xl transition-colors ${scrolled ? 'text-primary hover:bg-primary/5' : 'text-primary hover:bg-white/10'}`}
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
