@@ -274,8 +274,8 @@ const Organigramme = () => {
                 </div>
             </div>
 
-            {/* Isolated Scrollable Org Chart Tree */}
-            <div className="w-full overflow-x-auto py-12 no-scrollbar">
+            {/* Isolated Scrollable Org Chart Tree - Increased vertical padding for tooltips */}
+            <div className="w-full overflow-x-auto py-32 no-scrollbar">
                 <div className="flex flex-col items-center min-w-full w-max px-12 md:px-24">
                     {organigrammeData.map(pos => (
                         <PositionCard key={pos.id} pos={pos} />
