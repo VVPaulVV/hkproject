@@ -44,7 +44,7 @@ const Home = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 1.2 }}
-                            className="text-2xl md:text-3xl text-antique-text font-serif italic mb-16 max-w-2xl leading-relaxed drop-shadow-sm"
+                            className="text-2xl md:text-3xl text-white font-serif italic mb-16 max-w-2xl leading-relaxed drop-shadow-sm"
                         >
                             Un hôtel d'exception sur la presqu'île de Saint-Jean-Cap-Ferrat.
                             La démesure de Rome, le calme de la Riviera.
