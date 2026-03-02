@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Download, Instagram, Linkedin } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { projectData } from '../data';
 
@@ -159,15 +159,10 @@ const Navigation = () => {
                                     <a
                                         href="/Dossier_Fortuna.pdf"
                                         download
-                                        className="flex items-center justify-center gap-4 bg-primary text-white px-10 py-5 rounded-full font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-antique-text transition-colors shadow-xl w-full md:w-fit"
+                                        className="flex items-center justify-center gap-4 bg-primary text-white px-10 py-5 rounded-full font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-antique-text transition-colors shadow-xl w-full md:w-fit mx-auto md:mx-0"
                                     >
                                         Le Dossier <Download size={16} />
                                     </a>
-
-                                    <div className="flex gap-6 justify-center md:justify-start">
-                                        <a href="#" className="w-14 h-14 bg-white rounded-2xl text-primary shadow-sm hover:shadow-md transition-all flex items-center justify-center"><Instagram size={22} /></a>
-                                        <a href="#" className="w-14 h-14 bg-white rounded-2xl text-primary shadow-sm hover:shadow-md transition-all flex items-center justify-center"><Linkedin size={22} /></a>
-                                    </div>
                                 </div>
                                 <div className="text-center md:text-left">
                                     <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-antique-text/30">
