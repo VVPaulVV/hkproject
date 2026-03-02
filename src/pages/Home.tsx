@@ -46,8 +46,7 @@ const Home = () => {
                             transition={{ duration: 1, delay: 1.2 }}
                             className="text-2xl md:text-3xl text-antique-text font-serif font-bold italic mb-16 max-w-2xl leading-relaxed"
                         >
-                            Un hôtel d'exception sur la presqu'île de Saint-Jean-Cap-Ferrat.
-                            La démesure de Rome, le calme de la Riviera.
+                            "Un sanctuaire de l'histoire, redéfini pour le luxe contemporain au bord de la Méditerranée."
                         </motion.p>
 
                         <motion.div
