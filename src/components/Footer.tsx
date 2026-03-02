@@ -11,9 +11,9 @@ const Footer = () => {
             <div className="container-custom relative z-10">
                 <div className="grid lg:grid-cols-2 gap-20 items-start">
                     <div>
-                        <div className="flex items-center gap-6 mb-12">
-                            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-header font-black text-3xl border border-white/10 shadow-2xl">F</div>
-                            <span className="font-header font-black tracking-[0.4em] text-primary text-4xl uppercase">FORTUNA</span>
+                        <div className="flex items-center gap-4 md:gap-6 mb-12">
+                            <div className="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center text-white font-header font-black text-2xl md:text-3xl border border-white/10 shadow-2xl">F</div>
+                            <span className="font-header font-black tracking-[0.2em] md:tracking-[0.4em] text-primary text-2xl md:text-4xl uppercase leading-none">FORTUNA</span>
                         </div>
                         <p className="text-white/40 text-xl font-serif italic mb-12 max-w-md">
                             "Un sanctuaire de l'histoire, redéfini pour le luxe contemporain au bord de la Méditerranée."
