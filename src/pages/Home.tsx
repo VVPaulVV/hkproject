@@ -37,7 +37,7 @@ const Home = () => {
                             transition={{ duration: 1, delay: 0.7 }}
                             className="text-primary mb-12 hero-title"
                         >
-                            FOR<br />TUNA.
+                            FORTUNA.
                         </motion.h1>
 
                         <motion.p
