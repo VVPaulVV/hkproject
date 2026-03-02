@@ -34,7 +34,7 @@ const Restauration = () => {
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                className="p-8 md:p-10 rounded-[3rem] md:rounded-[4rem] bg-white shadow-xl shadow-primary/5 max-w-lg mx-auto w-full text-center"
+                                className="p-5 md:p-10 rounded-[3rem] md:rounded-[4rem] bg-white shadow-xl shadow-primary/5 max-w-xl mx-auto w-full text-center"
                             >
                                 <h3 className="text-primary text-xl md:text-2xl uppercase tracking-widest mb-8 md:mb-10 flex flex-col items-center gap-4">
                                     {sub.title}
@@ -56,7 +56,7 @@ const Restauration = () => {
                     </div>
 
                     {/* Meal Menu Section */}
-                    <div className="bg-antique-text text-white rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-10 shadow-[0_50px_100px_rgba(0,0,0,0.2)] mb-24 max-w-5xl mx-auto">
+                    <div className="bg-antique-text text-white rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-6 md:p-10 shadow-[0_50px_100px_rgba(0,0,0,0.2)] mb-24 max-w-5xl mx-auto">
                         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
                             <img src="/assets/la_tavola_mosaic.jpg" alt="" className="w-full h-full object-cover" />
                         </div>
@@ -98,7 +98,7 @@ const Restauration = () => {
                     </div>
 
                     {/* Bar Menu Section */}
-                    <div className="bg-white text-antique-text rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-10 shadow-2xl border border-primary/5 max-w-5xl mx-auto">
+                    <div className="bg-white text-antique-text rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-6 md:p-10 shadow-2xl border border-primary/5 max-w-5xl mx-auto">
                         <div className="absolute inset-0 marble-texture opacity-50 pointer-events-none" />
 
                         <div className="relative z-10 text-center">

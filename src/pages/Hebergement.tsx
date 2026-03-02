@@ -69,7 +69,7 @@ const Hebergement = () => {
                                 initial={{ opacity: 0, x: idx === 0 ? -30 : 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="p-8 md:p-10 rounded-[3rem] md:rounded-[4rem] bg-white border border-primary/5 shadow-xl text-center max-w-xl mx-auto w-full"
+                                className="p-5 md:p-10 rounded-[3rem] md:rounded-[4rem] bg-white border border-primary/5 shadow-xl text-center max-w-xl mx-auto w-full"
                             >
                                 <h3 className="text-primary text-xl md:text-2xl uppercase tracking-widest mb-10 md:mb-12 flex flex-col items-center gap-4">
                                     {sub.title}

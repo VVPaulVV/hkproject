@@ -35,7 +35,7 @@ const Detente = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className={`p-8 md:p-10 rounded-[3rem] md:rounded-[4rem] flex flex-col items-center text-center max-w-xl mx-auto w-full ${idx % 2 === 0 ? 'bg-primary text-white' : 'bg-white text-antique-text shadow-xl'}`}
+                                className={`p-5 md:p-10 rounded-[3rem] md:rounded-[4rem] flex flex-col items-center text-center max-w-xl mx-auto w-full ${idx % 2 === 0 ? 'bg-primary text-white' : 'bg-white text-antique-text shadow-xl'}`}
                             >
                                 <h2 className={`text-2xl md:text-4xl mb-10 md:mb-12 flex flex-col items-center gap-4 ${idx % 2 === 0 ? 'text-white' : 'text-primary'}`}>
                                     {sub.title}
