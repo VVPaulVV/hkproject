@@ -127,7 +127,7 @@ const Home = () => {
                     <h2 className="text-antique-text mb-4">EXPLORER L'UNIVERS</h2>
                     <div className="h-1 w-24 bg-primary mx-auto" />
                 </div>
-                <div className="container-custom grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div className="container-custom grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
                         { id: 'hebergement', title: 'Hébergement', img: '/assets/room_suite.jpg', part: 'I' },
                         { id: 'restauration', title: 'La Tavola', img: '/assets/la_tavola_mosaic.jpg', part: 'II' },

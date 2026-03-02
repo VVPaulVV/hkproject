@@ -35,9 +35,9 @@ const Detente = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className={`p-8 md:p-16 rounded-[3rem] md:rounded-[4rem] flex flex-col ${idx % 2 === 0 ? 'bg-primary text-white' : 'bg-white text-antique-text shadow-xl'}`}
+                                className={`p-8 md:p-10 rounded-[3rem] md:rounded-[4rem] flex flex-col items-center text-center max-w-xl mx-auto w-full ${idx % 2 === 0 ? 'bg-primary text-white' : 'bg-white text-antique-text shadow-xl'}`}
                             >
-                                <h2 className={`text-2xl md:text-4xl mb-10 md:mb-12 flex justify-between items-center ${idx % 2 === 0 ? 'text-white' : 'text-primary'}`}>
+                                <h2 className={`text-2xl md:text-4xl mb-10 md:mb-12 flex flex-col items-center gap-4 ${idx % 2 === 0 ? 'text-white' : 'text-primary'}`}>
                                     {sub.title}
                                     <div className={`h-[1px] w-12 md:w-20 ${idx % 2 === 0 ? 'bg-white/20' : 'bg-primary/10'}`} />
                                 </h2>
@@ -45,10 +45,10 @@ const Detente = () => {
                                 <div className="grid gap-8 md:gap-12 flex-grow">
                                     {sub.items.map((item, iIdx) => (
                                         <div key={iIdx} className="group">
-                                            <div className="flex items-center gap-4 md:gap-6 mb-4">
+                                            <div className="flex flex-col items-center gap-4 md:gap-6 mb-4">
                                                 {item.icon && (
                                                     <div className={`p-4 rounded-2xl shrink-0 ${idx % 2 === 0 ? 'bg-white/10' : 'bg-primary/5 text-primary'} group-hover:scale-110 transition-transform`}>
-                                                        <item.icon size={20} md={28} />
+                                                        <item.icon size={20} />
                                                     </div>
                                                 )}
                                                 <h3 className="text-xl md:text-2xl mb-0 font-black uppercase tracking-tight">{item.label}</h3>

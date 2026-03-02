@@ -34,17 +34,17 @@ const Restauration = () => {
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                className="p-8 md:p-12 rounded-[3rem] md:rounded-[4rem] bg-white shadow-xl shadow-primary/5"
+                                className="p-8 md:p-10 rounded-[3rem] md:rounded-[4rem] bg-white shadow-xl shadow-primary/5 max-w-lg mx-auto w-full text-center"
                             >
-                                <h3 className="text-primary text-xl md:text-2xl uppercase tracking-widest mb-8 md:mb-10 flex justify-between items-center">
+                                <h3 className="text-primary text-xl md:text-2xl uppercase tracking-widest mb-8 md:mb-10 flex flex-col items-center gap-4">
                                     {sub.title}
-                                    <div className="h-[1px] w-8 md:w-12 bg-primary/20" />
+                                    <div className="h-[1px] w-12 md:w-16 bg-primary/20" />
                                 </h3>
                                 <div className="space-y-6 md:space-y-8">
                                     {sub.items.map((item, iIdx) => (
-                                        <div key={iIdx} className="flex gap-4 md:gap-6 items-start">
-                                            {item.icon && <div className="p-3 bg-primary/5 text-primary rounded-xl shrink-0"><item.icon size={20} /></div>}
-                                            <div>
+                                        <div key={iIdx} className="flex flex-col items-center gap-3">
+                                            {item.icon && <div className="p-3 bg-primary/5 text-primary rounded-xl shrink-0 mb-2"><item.icon size={20} /></div>}
+                                            <div className="text-center">
                                                 <p className="font-header font-black uppercase text-xs md:text-sm tracking-widest text-antique-text">{item.label}</p>
                                                 <p className="text-sm md:text-base text-antique-text/60 mt-2 font-serif">{item.content}</p>
                                             </div>
@@ -56,13 +56,13 @@ const Restauration = () => {
                     </div>
 
                     {/* Meal Menu Section */}
-                    <div className="bg-antique-text text-white rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-20 shadow-[0_50px_100px_rgba(0,0,0,0.2)] mb-24">
+                    <div className="bg-antique-text text-white rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-10 shadow-[0_50px_100px_rgba(0,0,0,0.2)] mb-24 max-w-5xl mx-auto">
                         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
                             <img src="/assets/la_tavola_mosaic.jpg" alt="" className="w-full h-full object-cover" />
                         </div>
 
-                        <div className="relative z-10 text-center md:text-left">
-                            <div className="flex items-center justify-center md:justify-start gap-6 mb-8 md:mb-12">
+                        <div className="relative z-10 text-center">
+                            <div className="flex items-center justify-center gap-6 mb-8 md:mb-12">
                                 <div className="h-[1px] w-8 md:w-12 bg-secondary" />
                                 <span className="text-[10px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase text-secondary">La Carte du Chef</span>
                             </div>
@@ -75,18 +75,17 @@ const Restauration = () => {
                                     { title: 'DESSERTS', key: 'desserts', num: 'III' }
                                 ].map((cat) => (
                                     <div key={cat.key}>
-                                        <h4 className="flex items-center justify-center md:justify-start gap-4 text-primary mb-4 md:mb-6 text-xl font-black italic uppercase">
+                                        <h4 className="flex items-center justify-center gap-4 text-primary mb-4 md:mb-6 text-xl font-black italic uppercase">
                                             {cat.title} <span className="text-white/5 text-4xl md:text-5xl font-black">{cat.num}</span>
                                         </h4>
                                         <div className="space-y-5 md:space-y-6">
                                             {(menuData as any)[cat.key].map((item: any, iIdx: number) => (
-                                                <div key={iIdx} className="group cursor-pointer flex justify-between items-start gap-4 text-left">
-                                                    <div className="flex-1">
+                                                <div key={iIdx} className="group cursor-pointer flex flex-col items-center gap-2 text-center">
+                                                    <div className="w-full">
                                                         <p className="font-header font-bold text-base md:text-lg text-white group-hover:text-secondary transition-colors uppercase tracking-tight leading-tight">{item.name}</p>
                                                         <p className="text-white/30 text-[10px] md:text-xs font-serif italic mt-2">{item.desc}</p>
                                                     </div>
-                                                    <div className="flex items-center gap-2 shrink-0">
-                                                        <div className="h-[1px] w-2 md:w-4 bg-secondary/20 hidden group-hover:block" />
+                                                    <div className="flex items-center gap-2">
                                                         <span className="font-header font-bold text-secondary text-base md:text-lg">{item.price}€</span>
                                                     </div>
                                                 </div>
@@ -99,11 +98,11 @@ const Restauration = () => {
                     </div>
 
                     {/* Bar Menu Section */}
-                    <div className="bg-white text-antique-text rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-20 shadow-2xl border border-primary/5">
+                    <div className="bg-white text-antique-text rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-10 shadow-2xl border border-primary/5 max-w-5xl mx-auto">
                         <div className="absolute inset-0 marble-texture opacity-50 pointer-events-none" />
 
-                        <div className="relative z-10 text-center md:text-left">
-                            <div className="flex items-center justify-center md:justify-start gap-6 mb-8 md:mb-12">
+                        <div className="relative z-10 text-center">
+                            <div className="flex items-center justify-center gap-6 mb-8 md:mb-12">
                                 <div className="h-[1px] w-8 md:w-12 bg-primary" />
                                 <span className="text-[10px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase text-primary">Le Nectar de l'Empire</span>
                             </div>
@@ -112,9 +111,9 @@ const Restauration = () => {
                             <div className="grid lg:grid-cols-12 gap-12 md:gap-16">
                                 {/* 1. Cocktails - Main Column */}
                                 <div className="lg:col-span-12">
-                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex items-center gap-4">
+                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex flex-col items-center gap-4">
                                         1. BOISSONS & COCKTAILS SIGNATURES
-                                        <div className="h-[1px] flex-1 bg-primary/10" />
+                                        <div className="h-[1px] w-16 bg-primary/10" />
                                     </h3>
                                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
                                         {barMenuData.cocktails.map((item, idx) => (
@@ -132,20 +131,20 @@ const Restauration = () => {
 
                                 {/* 2. Wines Column */}
                                 <div className="lg:col-span-12">
-                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex items-center gap-4">
+                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex flex-col items-center gap-4">
                                         2. VINS & EFFERVESCENTS
-                                        <div className="h-[1px] flex-1 bg-primary/10" />
+                                        <div className="h-[1px] w-16 bg-primary/10" />
                                     </h3>
                                     <div className="grid md:grid-cols-3 gap-12 md:gap-16">
                                         {['Vins Blancs', 'Vins Rouges', 'Bulles'].map((type) => (
                                             <div key={type} className="space-y-6">
                                                 <h4 className="text-[10px] font-bold tracking-[0.3em] uppercase text-antique-text/40 mb-6">{type}</h4>
                                                 {barMenuData.vins.filter(v => v.desc === type).map((item, idx) => (
-                                                    <div key={idx} className="flex justify-between items-end border-b border-primary/5 pb-4 group">
-                                                        <div className="flex-1">
+                                                    <div key={idx} className="flex flex-col items-center border-b border-primary/5 pb-4 group gap-2 text-center">
+                                                        <div className="w-full">
                                                             <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight leading-none">{item.name}</p>
                                                         </div>
-                                                        <span className="text-antique-text font-bold text-base ml-4 shrink-0">{item.price}€</span>
+                                                        <span className="text-antique-text font-bold text-base">{item.price}€</span>
                                                     </div>
                                                 ))}
                                             </div>
@@ -155,18 +154,18 @@ const Restauration = () => {
 
                                 {/* 3.1. Sans Alcool */}
                                 <div className="lg:col-span-6">
-                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex items-center gap-4">
+                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex flex-col items-center gap-4">
                                         3.1. APÉRITIFS SANS ALCOOL
-                                        <div className="h-[1px] flex-1 bg-primary/10" />
+                                        <div className="h-[1px] w-16 bg-primary/10" />
                                     </h3>
                                     <div className="space-y-6">
                                         {(barMenuData as any).sansAlcool.map((item: any, idx: number) => (
-                                            <div key={idx} className="flex justify-between items-start border-b border-primary/5 pb-4 group gap-4">
-                                                <div className="flex-1">
+                                            <div key={idx} className="flex flex-col items-center border-b border-primary/5 pb-4 group gap-2 text-center">
+                                                <div className="w-full">
                                                     <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight leading-tight">{item.name}</p>
                                                     <p className="text-primary/60 text-[10px] uppercase font-bold tracking-widest mt-2 leading-relaxed">{item.desc}</p>
                                                 </div>
-                                                <span className="text-antique-text font-bold text-base shrink-0">{item.price}€</span>
+                                                <span className="text-antique-text font-bold text-base">{item.price}€</span>
                                             </div>
                                         ))}
                                     </div>
@@ -174,9 +173,9 @@ const Restauration = () => {
 
                                 {/* 3.2. Gustatio */}
                                 <div className="lg:col-span-6">
-                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex items-center gap-4">
+                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex flex-col items-center gap-4">
                                         3.2. ENTRÉES & À PARTAGER (GUSTATIO)
-                                        <div className="h-[1px] flex-1 bg-primary/10" />
+                                        <div className="h-[1px] w-16 bg-primary/10" />
                                     </h3>
                                     <div className="space-y-6">
                                         {barMenuData.aperitifs.map((item, idx) => (

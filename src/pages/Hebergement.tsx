@@ -69,18 +69,18 @@ const Hebergement = () => {
                                 initial={{ opacity: 0, x: idx === 0 ? -30 : 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="p-8 md:p-16 rounded-[3rem] md:rounded-[4rem] bg-white border border-primary/5 shadow-xl"
+                                className="p-8 md:p-10 rounded-[3rem] md:rounded-[4rem] bg-white border border-primary/5 shadow-xl text-center max-w-xl mx-auto w-full"
                             >
-                                <h3 className="text-primary text-xl md:text-2xl uppercase tracking-widest mb-10 md:mb-12 flex items-center justify-between">
+                                <h3 className="text-primary text-xl md:text-2xl uppercase tracking-widest mb-10 md:mb-12 flex flex-col items-center gap-4">
                                     {sub.title}
-                                    <div className="h-[1px] w-8 md:w-12 bg-primary/20" />
+                                    <div className="h-[1px] w-12 md:w-20 bg-primary/20" />
                                 </h3>
                                 <div className="space-y-8 md:space-y-10">
                                     {sub.items.map((item, iIdx) => (
-                                        <div key={iIdx} className="flex flex-col sm:flex-row gap-4 md:gap-6">
-                                            {item.icon && <div className="p-4 bg-primary/5 text-primary rounded-2xl shrink-0 w-fit"><item.icon size={20} md={24} /></div>}
-                                            <div className="flex-1">
-                                                <div className="flex justify-between items-center mb-2 gap-4">
+                                        <div key={iIdx} className="flex flex-col items-center gap-4 text-center">
+                                            {item.icon && <div className="p-4 bg-primary/5 text-primary rounded-2xl w-fit"><item.icon size={20} md={24} /></div>}
+                                            <div className="w-full">
+                                                <div className="flex flex-col items-center mb-2 gap-3">
                                                     <h4 className="text-base md:text-lg uppercase tracking-widest mb-0 font-black">{item.label}</h4>
                                                     {item.price && <span className="bg-primary text-white text-[8px] md:text-[10px] font-black px-3 py-1 rounded-full whitespace-nowrap">{item.price}</span>}
                                                 </div>
