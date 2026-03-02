@@ -72,7 +72,7 @@ const Home = () => {
                     className="absolute bottom-12 left-1/2 -translate-x-1/2 text-primary z-20"
                 >
                     <div className="flex flex-col items-center gap-2">
-                        <span className="text-[10px] tracking-[0.4em] uppercase font-bold text-primary/40">Scroll</span>
+                        <span className="text-[10px] tracking-[0.4em] uppercase font-bold text-primary/40">DEFILER</span>
                         <ChevronDown size={24} strokeWidth={3} />
                     </div>
                 </motion.div>
