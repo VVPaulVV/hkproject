@@ -256,14 +256,14 @@ const Organigramme = () => {
         <div className="min-h-screen pt-24 md:pt-40 pb-24 md:pb-32 marble-texture bg-antique-bg overflow-x-hidden">
             {/* Header Section remains standard width */}
             <div className="container-custom">
-                <div className="text-center mb-16 md:mb-24 px-4">
+                <div className="text-center mb-16 md:mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="inline-block"
+                        className="flex flex-col items-center"
                     >
-                        <span className="text-[10px] md:text-xs font-bold tracking-[0.5em] uppercase text-primary mb-4 block">Gouvernance & Excellence</span>
-                        <h1 className="text-4xl md:text-8xl text-antique-text mb-6 md:mb-8 font-black tracking-tight uppercase">ORGANIGRAMME.</h1>
+                        <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.5em] uppercase text-primary mb-4 block text-center">Gouvernance & Excellence</span>
+                        <h1 className="text-4xl md:text-8xl text-antique-text mb-6 md:mb-8 font-black tracking-tight uppercase text-center w-full">ORGANIGRAMME.</h1>
                         <div className="h-1 w-16 md:w-24 bg-primary mx-auto" />
                     </motion.div>
                 </div>
