@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Bed, Star, Shield, ArrowRight } from 'lucide-react';
 import { projectData } from '../data';
-import { Bed, Star, Shield } from 'lucide-react';
 
 const Hebergement = () => {
     const data = projectData.find(s => s.id === 'hebergement')!;
@@ -91,6 +92,24 @@ const Hebergement = () => {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            <section className="pb-32 px-4 md:px-0">
+                <div className="container-custom">
+                    <Link to="/restauration" className="group flex flex-col items-center text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="flex flex-col items-center"
+                        >
+                            <span className="text-secondary font-bold tracking-[0.5em] uppercase text-[10px] mb-6">Étape Suivante</span>
+                            <h2 className="text-primary text-3xl md:text-7xl lg:text-8xl mb-0 group-hover:scale-105 transition-transform duration-700 flex items-center gap-6">
+                                LA TAVOLA <ArrowRight className="w-8 h-8 md:w-16 md:h-16 group-hover:translate-x-4 transition-transform duration-700" />
+                            </h2>
+                        </motion.div>
+                    </Link>
                 </div>
             </section>
         </div>
