@@ -18,21 +18,21 @@ const Hebergement = () => {
                 <div className="absolute inset-0 bg-linear-to-b from-antique-bg/0 via-antique-bg/80 to-antique-bg z-10" />
                 <div className="container-custom relative z-20 text-center">
                     <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-                        <span className="text-secondary font-bold tracking-[0.5em] uppercase text-xs mb-4 block">Partie II</span>
-                        <h1 className="text-primary">{data.title}</h1>
+                        <span className="text-secondary font-bold tracking-[0.5em] uppercase text-[10px] md:text-xs mb-4 block">Partie II</span>
+                        <h1 className="text-primary text-4xl md:text-7xl lg:text-8xl">{data.title}</h1>
                     </motion.div>
                 </div>
             </section>
 
             <section className="section-padding pt-0">
                 <div className="container-custom">
-                    <div className="max-w-4xl mx-auto text-center mb-24">
-                        <p className="text-2xl font-serif italic text-antique-text/80 leading-relaxed italic">
+                    <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24 px-4">
+                        <p className="text-lg md:text-2xl font-serif italic text-antique-text/80 leading-relaxed italic">
                             {data.description}
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8 mb-32">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-24 md:mb-32">
                         {rooms.map((room, idx) => (
                             <motion.div
                                 key={idx}
@@ -40,19 +40,19 @@ const Hebergement = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="group relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl"
+                                className="group relative aspect-[4/5] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl"
                             >
                                 <img src={room.img} alt={room.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                                <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-10">
-                                    <div className="flex justify-between items-end">
+                                <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-8 md:p-10">
+                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4">
                                         <div>
-                                            <room.icon size={24} className="text-secondary mb-4" />
-                                            <h3 className="text-white text-2xl mb-2">{room.title}</h3>
-                                            <p className="text-secondary font-bold tracking-widest text-xs uppercase">{room.area}</p>
+                                            <room.icon size={20} className="text-secondary mb-3 md:mb-4" />
+                                            <h3 className="text-white text-xl md:text-2xl mb-1 md:mb-2">{room.title}</h3>
+                                            <p className="text-secondary font-bold tracking-widest text-[10px] md:text-xs uppercase">{room.area}</p>
                                         </div>
-                                        <div className="text-right">
-                                            <span className="block text-white/50 text-[10px] uppercase tracking-widest mb-1 font-bold">À partir de</span>
-                                            <span className="text-white font-black text-xl">{room.price}</span>
+                                        <div className="text-left sm:text-right">
+                                            <span className="block text-white/50 text-[8px] md:text-[10px] uppercase tracking-widest mb-1 font-bold">À partir de</span>
+                                            <span className="text-white font-black text-lg md:text-xl">{room.price}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -61,29 +61,29 @@ const Hebergement = () => {
                     </div>
 
                     {/* Subsections Detail */}
-                    <div className="grid lg:grid-cols-2 gap-8">
+                    <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
                         {data.subsections.map((sub, idx) => (
                             <motion.div
                                 key={sub.id}
                                 initial={{ opacity: 0, x: idx === 0 ? -30 : 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="p-12 md:p-16 rounded-[4rem] bg-white border border-primary/5 shadow-xl"
+                                className="p-8 md:p-16 rounded-[3rem] md:rounded-[4rem] bg-white border border-primary/5 shadow-xl"
                             >
-                                <h3 className="text-primary text-2xl uppercase tracking-widest mb-12 flex items-center justify-between">
+                                <h3 className="text-primary text-xl md:text-2xl uppercase tracking-widest mb-10 md:mb-12 flex items-center justify-between">
                                     {sub.title}
-                                    <div className="h-[1px] w-12 bg-primary/20" />
+                                    <div className="h-[1px] w-8 md:w-12 bg-primary/20" />
                                 </h3>
-                                <div className="space-y-10">
+                                <div className="space-y-8 md:space-y-10">
                                     {sub.items.map((item, iIdx) => (
-                                        <div key={iIdx} className="flex gap-6">
-                                            {item.icon && <div className="p-4 bg-primary/5 text-primary rounded-2xl"><item.icon size={24} /></div>}
-                                            <div>
-                                                <div className="flex justify-between items-center mb-2">
-                                                    <h4 className="text-lg uppercase tracking-widest mb-0">{item.label}</h4>
-                                                    {item.price && <span className="bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full">{item.price}</span>}
+                                        <div key={iIdx} className="flex flex-col sm:flex-row gap-4 md:gap-6">
+                                            {item.icon && <div className="p-4 bg-primary/5 text-primary rounded-2xl shrink-0 w-fit"><item.icon size={20} md={24} /></div>}
+                                            <div className="flex-1">
+                                                <div className="flex justify-between items-center mb-2 gap-4">
+                                                    <h4 className="text-base md:text-lg uppercase tracking-widest mb-0 font-black">{item.label}</h4>
+                                                    {item.price && <span className="bg-primary text-white text-[8px] md:text-[10px] font-black px-3 py-1 rounded-full whitespace-nowrap">{item.price}</span>}
                                                 </div>
-                                                <p className="text-antique-text/60 font-serif leading-relaxed">{item.content}</p>
+                                                <p className="text-sm md:text-base text-antique-text/60 font-serif leading-relaxed">{item.content}</p>
                                             </div>
                                         </div>
                                     ))}

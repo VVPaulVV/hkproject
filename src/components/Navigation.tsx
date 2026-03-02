@@ -38,7 +38,7 @@ const Navigation = () => {
                 damping: 30,
                 staggerChildren: 0.05,
                 staggerDirection: -1
-            }
+            } as any
         },
         open: {
             opacity: 1,
@@ -49,7 +49,7 @@ const Navigation = () => {
                 damping: 30,
                 staggerChildren: 0.1,
                 delayChildren: 0.2
-            }
+            } as any
         }
     };
 
@@ -127,12 +127,12 @@ const Navigation = () => {
                             </button>
                         </div>
 
-                        <div className="flex-1 flex flex-col justify-center container-custom relative z-10 pt-20 pb-32">
-                            <div className="grid gap-8">
+                        <div className="flex-1 flex flex-col justify-between container-custom relative z-10 pt-10 pb-20">
+                            <div className="flex flex-col gap-6 md:gap-8 overflow-y-auto max-h-[60vh] py-8">
                                 <motion.div variants={itemVariants}>
-                                    <Link to="/" className="group flex items-center gap-6">
-                                        <span className="text-xs font-black text-primary/20 group-hover:text-primary transition-colors tracking-widest">00</span>
-                                        <span className="text-4xl md:text-6xl font-header font-black text-antique-text hover:text-primary transition-all uppercase tracking-tighter">ACCUEIL</span>
+                                    <Link to="/" className="group flex items-center gap-5 md:gap-6">
+                                        <span className="text-[10px] md:text-xs font-black text-primary/30 group-hover:text-primary transition-colors tracking-widest min-w-[20px]">00</span>
+                                        <span className="text-3xl md:text-7xl font-header font-black text-antique-text hover:text-primary transition-all uppercase tracking-tighter">ACCUEIL</span>
                                     </Link>
                                 </motion.div>
 
@@ -140,10 +140,10 @@ const Navigation = () => {
                                     <motion.div key={section.id} variants={itemVariants}>
                                         <Link
                                             to={`/${section.id}`}
-                                            className="group flex items-center gap-6"
+                                            className="group flex items-center gap-5 md:gap-6"
                                         >
-                                            <span className="text-xs font-black text-primary/20 group-hover:text-primary transition-colors tracking-widest">0{idx + 1}</span>
-                                            <span className="text-4xl md:text-6xl font-header font-black text-antique-text hover:text-primary transition-all uppercase tracking-tighter">
+                                            <span className="text-[10px] md:text-xs font-black text-primary/30 group-hover:text-primary transition-colors tracking-widest min-w-[20px]">0{idx + 1}</span>
+                                            <span className="text-3xl md:text-7xl font-header font-black text-antique-text hover:text-primary transition-all uppercase tracking-tighter">
                                                 {section.title}
                                             </span>
                                         </Link>
@@ -153,19 +153,26 @@ const Navigation = () => {
 
                             <motion.div
                                 variants={itemVariants}
-                                className="mt-20 flex flex-col md:flex-row gap-12 md:items-center border-t border-primary/10 pt-12"
+                                className="mt-12 flex flex-col gap-10 border-t border-primary/10 pt-12"
                             >
-                                <a
-                                    href="/Dossier_Fortuna.pdf"
-                                    download
-                                    className="flex items-center justify-center gap-4 bg-primary text-white px-10 py-5 rounded-full font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-antique-text transition-colors shadow-xl"
-                                >
-                                    Télécharger le Dossier <Download size={16} />
-                                </a>
+                                <div className="flex flex-col md:flex-row gap-8 md:items-center">
+                                    <a
+                                        href="/Dossier_Fortuna.pdf"
+                                        download
+                                        className="flex items-center justify-center gap-4 bg-primary text-white px-10 py-5 rounded-full font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-antique-text transition-colors shadow-xl w-full md:w-fit"
+                                    >
+                                        Le Dossier <Download size={16} />
+                                    </a>
 
-                                <div className="flex gap-8">
-                                    <a href="#" className="p-4 bg-white rounded-2xl text-primary shadow-sm hover:shadow-md transition-all"><Instagram size={20} /></a>
-                                    <a href="#" className="p-4 bg-white rounded-2xl text-primary shadow-sm hover:shadow-md transition-all"><Linkedin size={20} /></a>
+                                    <div className="flex gap-6 justify-center md:justify-start">
+                                        <a href="#" className="w-14 h-14 bg-white rounded-2xl text-primary shadow-sm hover:shadow-md transition-all flex items-center justify-center"><Instagram size={22} /></a>
+                                        <a href="#" className="w-14 h-14 bg-white rounded-2xl text-primary shadow-sm hover:shadow-md transition-all flex items-center justify-center"><Linkedin size={22} /></a>
+                                    </div>
+                                </div>
+                                <div className="text-center md:text-left">
+                                    <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-antique-text/30">
+                                        St-Jean-Cap-Ferrat • Côte d'Azur
+                                    </p>
                                 </div>
                             </motion.div>
                         </div>
