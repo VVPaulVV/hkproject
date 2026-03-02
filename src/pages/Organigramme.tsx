@@ -253,8 +253,9 @@ const PositionCard = ({ pos, depth = 0 }: { pos: Position; depth?: number }) => 
 const Organigramme = () => {
     return (
         <div className="min-h-screen pt-24 md:pt-40 pb-24 md:pb-32 overflow-x-auto marble-texture bg-antique-bg">
-            <div className="container-custom min-w-full md:min-w-[1200px]">
-                <div className="text-center mb-16 md:mb-24 px-4">
+            <div className="flex flex-col items-center min-w-max w-full">
+                {/* Header Section */}
+                <div className="text-center mb-16 md:mb-24 px-8 w-full max-w-5xl">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -262,48 +263,58 @@ const Organigramme = () => {
                     >
                         <span className="text-[10px] md:text-xs font-bold tracking-[0.5em] uppercase text-primary mb-4 block">Gouvernance & Excellence</span>
                         <h1 className="text-4xl md:text-8xl text-antique-text mb-6 md:mb-8 font-black tracking-tight uppercase">ORGANIGRAMME.</h1>
-                        <div className="h-1 w-16 md:w-24 bg-primary mx-auto md:mb-0" />
+                        <div className="h-1 w-16 md:w-24 bg-primary mx-auto" />
                     </motion.div>
                 </div>
 
                 {/* Mobile scroll indicator */}
-                <div className="md:hidden flex flex-col items-center gap-2 mb-12 opacity-40">
+                <div className="md:hidden flex flex-col items-center gap-2 mb-12 opacity-40 sticky left-0 right-0">
                     <span className="text-[10px] font-bold tracking-widest uppercase">Faites défiler pour explorer</span>
                     <div className="h-[1px] w-20 bg-primary" />
                 </div>
 
-                <div className="flex flex-col items-center px-4">
+                {/* Org Chart Tree */}
+                <div className="flex flex-col items-center px-24 mb-32">
                     {organigrammeData.map(pos => (
                         <PositionCard key={pos.id} pos={pos} />
                     ))}
                 </div>
 
-                <div className="mt-24 md:mt-40 max-w-4xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12 border-t border-primary/10 pt-16 md:pt-20 px-4">
-                    <div className="text-center md:text-left">
-                        <h3 className="text-xl md:text-2xl mb-6 font-black uppercase tracking-tight">PHILOSOPHIE</h3>
-                        <p className="text-sm md:text-base text-antique-text/70 italic font-serif leading-relaxed">
-                            Chaque collaborateur de Fortuna est un gardien de l'hospitalité impériale.
-                            De la direction aux étages, notre structure est conçue pour garantir une fluidité
-                            digne des plus grandes demeures de la Rome Antique.
-                        </p>
+                {/* Footer Section (Philosophy & Legend) */}
+                <div className="w-full max-w-6xl px-8 mb-12 sticky left-0 right-0">
+                    <div className="grid md:grid-cols-2 gap-10 md:gap-12 border-t border-primary/10 pt-16 md:pt-20">
+                        <div className="text-center md:text-left">
+                            <h3 className="text-xl md:text-2xl mb-6 font-black uppercase tracking-tight">PHILOSOPHIE</h3>
+                            <p className="text-sm md:text-base text-antique-text/70 italic font-serif leading-relaxed">
+                                Chaque collaborateur de Fortuna est un gardien de l'hospitalité impériale.
+                                De la direction aux étages, notre structure est conçue pour garantir une fluidité
+                                digne des plus grandes demeures de la Rome Antique.
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                            <div className="flex items-center gap-2 px-4 py-2 bg-[#A33434]/5 rounded-full border border-[#A33434]/10">
+                                <div className="w-2 h-2 rounded-full bg-[#A33434]" />
+                                <span className="text-[10px] font-bold uppercase tracking-wider">Direction</span>
+                            </div>
+                            <div className="flex items-center gap-2 px-4 py-2 bg-[#6A7FDB]/5 rounded-full border border-[#6A7FDB]/10">
+                                <div className="w-2 h-2 rounded-full bg-[#6A7FDB]" />
+                                <span className="text-[10px] font-bold uppercase tracking-wider">Restauration</span>
+                            </div>
+                            <div className="flex items-center gap-2 px-4 py-2 bg-[#fffd82]/5 rounded-full border border-[#fffd82]/10">
+                                <div className="w-2 h-2 rounded-full bg-[#fffd82]" />
+                                <span className="text-[10px] font-bold uppercase tracking-wider">Hébergement</span>
+                            </div>
+                            <div className="flex items-center gap-2 px-4 py-2 bg-[#ABE188]/5 rounded-full border border-[#ABE188]/10">
+                                <div className="w-2 h-2 rounded-full bg-[#ABE188]" />
+                                <span className="text-[10px] font-bold uppercase tracking-wider">Réception</span>
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                        <div className="flex items-center gap-2 px-4 py-2 bg-[#A33434]/5 rounded-full border border-[#A33434]/10">
-                            <div className="w-2 h-2 rounded-full bg-[#A33434]" />
-                            <span className="text-[10px] font-bold uppercase tracking-wider">Direction</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-4 py-2 bg-[#6A7FDB]/5 rounded-full border border-[#6A7FDB]/10">
-                            <div className="w-2 h-2 rounded-full bg-[#6A7FDB]" />
-                            <span className="text-[10px] font-bold uppercase tracking-wider">Restauration</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-4 py-2 bg-[#fffd82]/5 rounded-full border border-[#fffd82]/10">
-                            <div className="w-2 h-2 rounded-full bg-[#fffd82]" />
-                            <span className="text-[10px] font-bold uppercase tracking-wider">Hébergement</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-4 py-2 bg-[#ABE188]/5 rounded-full border border-[#ABE188]/10">
-                            <div className="w-2 h-2 rounded-full bg-[#ABE188]" />
-                            <span className="text-[10px] font-bold uppercase tracking-wider">Réception</span>
-                        </div>
+
+                    <div className="mt-24 md:mt-40 text-center sticky left-0 right-0">
+                        <p className="text-[8px] md:text-[10px] font-bold tracking-[0.5em] uppercase text-antique-text/30">
+                            Preserving the past, defining the future.
+                        </p>
                     </div>
                 </div>
             </div>
