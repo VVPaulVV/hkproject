@@ -37,7 +37,7 @@ const Footer = () => {
                     <div className="grid grid-cols-2 gap-12">
                         <div className="flex flex-col gap-6">
                             <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-2">Navigation</span>
-                            <Link to="/" className="text-white/40 hover:text-white transition-colors text-sm font-medium">Home</Link>
+                            <Link to="/" className="text-white/40 hover:text-white transition-colors text-sm font-medium">ACCUEIL</Link>
                             {projectData.map(s => (
                                 <Link key={s.id} to={`/${s.id}`} className="text-white/40 hover:text-white transition-colors text-sm font-medium">
                                     {s.title}

@@ -79,7 +79,7 @@ const Navigation = () => {
                         </button>
 
                         <div className="flex flex-col gap-10 items-center relative z-10">
-                            <Link to="/" className="text-5xl font-header font-black text-primary hover:text-secondary transition-all hover:tracking-widest">HOME</Link>
+                            <Link to="/" className="text-5xl font-header font-black text-primary hover:text-secondary transition-all hover:tracking-widest">ACCUEIL</Link>
                             {projectData.map((section, idx) => (
                                 <motion.div
                                     key={section.id}
