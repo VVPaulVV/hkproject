@@ -253,7 +253,7 @@ const PositionCard = ({ pos, depth = 0 }: { pos: Position; depth?: number }) => 
 
 const Organigramme = () => {
     return (
-        <div className="min-h-screen pt-24 md:pt-40 pb-24 md:pb-32 marble-texture bg-antique-bg overflow-x-hidden">
+        <div className="min-h-screen pt-32 md:pt-48 pb-24 md:pb-32 marble-texture bg-antique-bg overflow-x-hidden">
             {/* Header Section remains standard width */}
             <div className="container-custom">
                 <div className="text-center mb-16 md:mb-24">
