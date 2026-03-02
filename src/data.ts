@@ -68,6 +68,38 @@ export const menuData = {
     ]
 };
 
+export const barMenuData = {
+    cocktails: [
+        { name: "AMBROSIAM", desc: "Nectar des Dieux", ingredients: "Ammnois, Nectar, Romains, Limmeria & Dieux", price: "15" },
+        { name: "AURUM ROMANUM", desc: "Or Romain", ingredients: "Romain, fruits, Romana & Mûre", price: "16" },
+        { name: "FESTA APEROL", desc: "Spritz Apéritif", ingredients: "Casamono, Aperol, supremiom & sprise", price: "15" },
+        { name: "POHER AMRIT", desc: "Ponor Romain", ingredients: "Fogretieso, lait, Aperol spritz", price: "22" },
+        { name: "AMBROSIAM (Édition Dieux)", desc: "Nectar des Dieux : des Dieux", ingredients: "Mectoto, antieistiod, contanoi des dieux", price: "16" },
+        { name: "AURUM ROMANUM (Classique)", desc: "Or Romain", ingredients: "Samton, Spritz, imots, koninan or", price: "15" },
+        { name: "FESTA APEROL (Léger)", desc: "Spritz Apéritif", ingredients: "Appe, Aperal Sprite", price: "7" },
+    ],
+    vins: [
+        { name: "Falanghina IGT Campania", desc: "Vin Blanc", price: "5 / 20" },
+        { name: "Gavi di Gavi DOCG", desc: "Vin Blanc", price: "13 / 60" },
+        { name: "Vermentino di Sardegna", desc: "Vin Blanc", price: "13 / 120" },
+        { name: "Chianti Classico DOCG", desc: "Vin Rouge", price: "16 / 120" },
+        { name: "Valpolicella Ripasso DOC", desc: "Vin Rouge", price: "16 / 120" },
+        { name: "Barolo DOCG", desc: "Vin Rouge", price: "17 / 120" },
+        { name: "Prosecco DOC", desc: "Bulles", price: "9" },
+        { name: "Moët & Chandon", desc: "Champagne", price: "10" },
+    ],
+    aperitifs: [
+        { name: "Negroni Senza", desc: "Sans Alcool", price: "5" },
+        { name: "Spritz Virgine", desc: "Sans Alcool", price: "18" },
+        { name: "Spritz Htogine", desc: "Sans Alcool", price: "12" },
+        { name: "Olives Marinées", desc: "À Partager", price: "13" },
+        { name: "Focaccia Maison", desc: "À Partager", price: "16" },
+        { name: "Planche de Charcuterie Romaine", desc: "À Partager", price: "16" },
+        { name: "Frittura di Paranza", desc: "Friture de la mer", price: "14" },
+        { name: "Mozzarella di Bufala Campana", desc: "À Partager", price: "18" },
+    ]
+};
+
 export const projectData: ProjectSection[] = [
     {
         id: 'concept',

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { projectData, menuData } from '../data';
+import { projectData, menuData, barMenuData } from '../data';
 
 const Restauration = () => {
     const data = projectData.find(s => s.id === 'restauration')!;
@@ -53,8 +53,8 @@ const Restauration = () => {
                         ))}
                     </div>
 
-                    {/* Menu Section */}
-                    <div className="bg-antique-text text-white rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-24 shadow-[0_50px_100px_rgba(0,0,0,0.2)]">
+                    {/* Meal Menu Section */}
+                    <div className="bg-antique-text text-white rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-24 shadow-[0_50px_100px_rgba(0,0,0,0.2)] mb-24">
                         <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
                             <img src="/assets/la_tavola_mosaic.jpg" alt="" className="w-full h-full object-cover" />
                         </div>
@@ -64,7 +64,7 @@ const Restauration = () => {
                                 <div className="h-[1px] w-8 md:w-12 bg-secondary" />
                                 <span className="text-[10px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase text-secondary">La Carte du Chef</span>
                             </div>
-                            <h2 className="mb-16 md:mb-24 text-white text-3xl md:text-6xl">MANIFESTO <br />GASTRONOMICO.</h2>
+                            <h2 className="mb-16 md:mb-24 text-white text-3xl md:text-6xl uppercase font-black italic">MANIFESTO <br />GASTRONOMICO.</h2>
 
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-24">
                                 {[
@@ -73,7 +73,7 @@ const Restauration = () => {
                                     { title: 'DESSERTS', key: 'desserts', num: 'III' }
                                 ].map((cat) => (
                                     <div key={cat.key}>
-                                        <h4 className="flex items-center justify-center md:justify-start gap-4 text-primary mb-8 md:mb-12 text-xl">
+                                        <h4 className="flex items-center justify-center md:justify-start gap-4 text-primary mb-8 md:mb-12 text-xl font-black italic uppercase">
                                             {cat.title} <span className="text-white/5 text-4xl md:text-5xl font-black">{cat.num}</span>
                                         </h4>
                                         <div className="space-y-8 md:space-y-10">
@@ -85,13 +85,92 @@ const Restauration = () => {
                                                     </div>
                                                     <div className="flex items-center gap-2 shrink-0">
                                                         <div className="h-[1px] w-2 md:w-4 bg-secondary/20 hidden group-hover:block" />
-                                                        <span className="font-header font-bold text-secondary text-base md:text-lg">{item.price}</span>
+                                                        <span className="font-header font-bold text-secondary text-base md:text-lg">{item.price}€</span>
                                                     </div>
                                                 </div>
                                             ))}
                                         </div>
                                     </div>
                                 ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bar Menu Section */}
+                    <div className="bg-white text-antique-text rounded-[3rem] md:rounded-[5rem] overflow-hidden relative p-8 md:p-24 shadow-2xl border border-primary/5">
+                        <div className="absolute inset-0 marble-texture opacity-50 pointer-events-none" />
+
+                        <div className="relative z-10 text-center md:text-left">
+                            <div className="flex items-center justify-center md:justify-start gap-6 mb-8 md:mb-12">
+                                <div className="h-[1px] w-8 md:w-12 bg-primary" />
+                                <span className="text-[10px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase text-primary">Le Nectar de l'Empire</span>
+                            </div>
+                            <h2 className="mb-16 md:mb-24 text-antique-text text-3xl md:text-6xl uppercase font-black italic leading-none">CARTE DU BAR.</h2>
+
+                            <div className="grid lg:grid-cols-12 gap-16 md:gap-24">
+                                {/* Cocktails - Main Column */}
+                                <div className="lg:col-span-12">
+                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-12 tracking-widest flex items-center gap-4">
+                                        BOISSONS & COCKTAILS
+                                        <div className="h-[1px] flex-1 bg-primary/10" />
+                                    </h3>
+                                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+                                        {barMenuData.cocktails.map((item, idx) => (
+                                            <div key={idx} className="group flex flex-col gap-3">
+                                                <div className="flex justify-between items-center">
+                                                    <p className="font-header font-black text-lg text-antique-text group-hover:text-primary transition-colors tracking-tight uppercase leading-none">{item.name}</p>
+                                                    <span className="text-primary font-bold text-lg">{item.price}€</span>
+                                                </div>
+                                                <p className="text-primary font-bold text-[10px] uppercase tracking-widest leading-none">{item.desc}</p>
+                                                <p className="text-antique-text/50 text-[11px] font-serif italic leading-relaxed">{item.ingredients}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Wines Column */}
+                                <div className="lg:col-span-6">
+                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-12 tracking-widest flex items-center gap-4">
+                                        VINS & EFFERVESCENTS
+                                        <div className="h-[1px] flex-1 bg-primary/10" />
+                                    </h3>
+                                    <div className="space-y-10">
+                                        {barMenuData.vins.map((item, idx) => (
+                                            <div key={idx} className="flex justify-between items-end border-b border-primary/5 pb-4 group">
+                                                <div className="flex-1">
+                                                    <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight">{item.name}</p>
+                                                    <p className="text-primary/60 text-[10px] uppercase font-bold tracking-widest mt-1">{item.desc}</p>
+                                                </div>
+                                                <span className="text-antique-text font-bold text-base ml-4 shrink-0">{item.price}€</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Food Column */}
+                                <div className="lg:col-span-6">
+                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-12 tracking-widest flex items-center gap-4">
+                                        ENTRÉES & APÉRITIFS
+                                        <div className="h-[1px] flex-1 bg-primary/10" />
+                                    </h3>
+                                    <div className="space-y-10">
+                                        {barMenuData.aperitifs.map((item, idx) => (
+                                            <div key={idx} className="flex justify-between items-end border-b border-primary/5 pb-4 group">
+                                                <div className="flex-1">
+                                                    <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight">{item.name}</p>
+                                                    <p className="text-primary/60 text-[10px] uppercase font-bold tracking-widest mt-1">{item.desc}</p>
+                                                </div>
+                                                <span className="text-antique-text font-bold text-base ml-4 shrink-0">{item.price}€</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-24 pt-12 border-t border-primary/10 text-center md:text-left">
+                                <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-antique-text/30">
+                                    Dégustation interdite aux mineurs • À consommer avec modération
+                                </p>
                             </div>
                         </div>
                     </div>
