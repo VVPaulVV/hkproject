@@ -110,13 +110,13 @@ const Restauration = () => {
                             <h2 className="mb-12 md:mb-16 text-antique-text text-3xl md:text-6xl uppercase font-black italic leading-none">CARTE DU BAR.</h2>
 
                             <div className="grid lg:grid-cols-12 gap-12 md:gap-16">
-                                {/* Cocktails - Main Column */}
+                                {/* 1. Cocktails - Main Column */}
                                 <div className="lg:col-span-12">
                                     <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex items-center gap-4">
-                                        BOISSONS & COCKTAILS
+                                        1. BOISSONS & COCKTAILS SIGNATURES
                                         <div className="h-[1px] flex-1 bg-primary/10" />
                                     </h3>
-                                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
                                         {barMenuData.cocktails.map((item, idx) => (
                                             <div key={idx} className="group flex flex-col gap-3">
                                                 <div className="flex justify-between items-center">
@@ -130,39 +130,62 @@ const Restauration = () => {
                                     </div>
                                 </div>
 
-                                {/* Wines Column */}
-                                <div className="lg:col-span-6">
+                                {/* 2. Wines Column */}
+                                <div className="lg:col-span-12">
                                     <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex items-center gap-4">
-                                        VINS & EFFERVESCENTS
+                                        2. VINS & EFFERVESCENTS
                                         <div className="h-[1px] flex-1 bg-primary/10" />
                                     </h3>
-                                    <div className="space-y-6">
-                                        {barMenuData.vins.map((item, idx) => (
-                                            <div key={idx} className="flex justify-between items-end border-b border-primary/5 pb-4 group">
-                                                <div className="flex-1">
-                                                    <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight">{item.name}</p>
-                                                    <p className="text-primary/60 text-[10px] uppercase font-bold tracking-widest mt-1">{item.desc}</p>
-                                                </div>
-                                                <span className="text-antique-text font-bold text-base ml-4 shrink-0">{item.price}€</span>
+                                    <div className="grid md:grid-cols-3 gap-12 md:gap-16">
+                                        {['Vins Blancs', 'Vins Rouges', 'Bulles'].map((type) => (
+                                            <div key={type} className="space-y-6">
+                                                <h4 className="text-[10px] font-bold tracking-[0.3em] uppercase text-antique-text/40 mb-6">{type}</h4>
+                                                {barMenuData.vins.filter(v => v.desc === type).map((item, idx) => (
+                                                    <div key={idx} className="flex justify-between items-end border-b border-primary/5 pb-4 group">
+                                                        <div className="flex-1">
+                                                            <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight leading-none">{item.name}</p>
+                                                        </div>
+                                                        <span className="text-antique-text font-bold text-base ml-4 shrink-0">{item.price}€</span>
+                                                    </div>
+                                                ))}
                                             </div>
                                         ))}
                                     </div>
                                 </div>
 
-                                {/* Food Column */}
+                                {/* 3.1. Sans Alcool */}
                                 <div className="lg:col-span-6">
                                     <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex items-center gap-4">
-                                        ENTRÉES & APÉRITIFS
+                                        3.1. APÉRITIFS SANS ALCOOL
+                                        <div className="h-[1px] flex-1 bg-primary/10" />
+                                    </h3>
+                                    <div className="space-y-6">
+                                        {(barMenuData as any).sansAlcool.map((item: any, idx: number) => (
+                                            <div key={idx} className="flex justify-between items-start border-b border-primary/5 pb-4 group gap-4">
+                                                <div className="flex-1">
+                                                    <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight leading-tight">{item.name}</p>
+                                                    <p className="text-primary/60 text-[10px] uppercase font-bold tracking-widest mt-2 leading-relaxed">{item.desc}</p>
+                                                </div>
+                                                <span className="text-antique-text font-bold text-base shrink-0">{item.price}€</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* 3.2. Gustatio */}
+                                <div className="lg:col-span-6">
+                                    <h3 className="text-primary text-xl md:text-2xl font-black italic uppercase mb-8 tracking-widest flex items-center gap-4">
+                                        3.2. ENTRÉES & À PARTAGER (GUSTATIO)
                                         <div className="h-[1px] flex-1 bg-primary/10" />
                                     </h3>
                                     <div className="space-y-6">
                                         {barMenuData.aperitifs.map((item, idx) => (
-                                            <div key={idx} className="flex justify-between items-end border-b border-primary/5 pb-4 group">
+                                            <div key={idx} className="flex justify-between items-start border-b border-primary/5 pb-4 group gap-4">
                                                 <div className="flex-1">
-                                                    <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight">{item.name}</p>
-                                                    <p className="text-primary/60 text-[10px] uppercase font-bold tracking-widest mt-1">{item.desc}</p>
+                                                    <p className="font-header font-bold text-base text-antique-text group-hover:text-primary transition-colors uppercase tracking-tight leading-tight">{item.name}</p>
+                                                    <p className="text-primary/60 text-[10px] uppercase font-bold tracking-widest mt-2 leading-relaxed">{item.desc}</p>
                                                 </div>
-                                                <span className="text-antique-text font-bold text-base ml-4 shrink-0">{item.price}€</span>
+                                                <span className="text-antique-text font-bold text-base shrink-0">{item.price}€</span>
                                             </div>
                                         ))}
                                     </div>
