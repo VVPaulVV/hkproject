@@ -13,7 +13,7 @@ const Detente = () => {
                 <div className="absolute inset-0 bg-linear-to-b from-antique-bg/0 via-antique-bg/80 to-antique-bg z-10" />
                 <div className="container-custom relative z-20 text-center">
                     <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-                        <span className="text-secondary font-bold tracking-[0.5em] uppercase text-[10px] md:text-xs mb-4 block">Partie IV</span>
+                        <span className="text-secondary font-bold tracking-[0.5em] uppercase text-[10px] md:text-xs mb-4 block">Partie III</span>
                         <h1 className="text-primary text-4xl md:text-7xl lg:text-8xl">{data.title}</h1>
                     </motion.div>
                 </div>

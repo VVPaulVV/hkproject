@@ -1,14 +1,11 @@
 import {
     Waves,
-    Map as MapIcon,
     Utensils,
     Bed,
     Music,
-    Compass,
     Church,
     Shield,
     Star,
-    Info,
     Clock,
     Coffee,
     Sword,
@@ -101,24 +98,6 @@ export const barMenuData = {
 };
 
 export const projectData: ProjectSection[] = [
-    {
-        id: 'concept',
-        title: 'LE MICROCOSME ROMAIN',
-        icon: Compass,
-        image: '/assets/slide_plan.jpg',
-        description: "Un hôtel ***** representative du cadre de vie dans la Rome antique. Un microcosme d'une ville romaine alliant modernité et antiquité.",
-        subsections: [
-            {
-                id: 'urban-structure',
-                title: 'Structure & Centuriation',
-                items: [
-                    { label: 'Cardo & Decumanus', content: "Architecture organisée selon le plan de ville traditionnel romain.", icon: MapIcon },
-                    { label: 'Le Forum', content: "Centre névralgique pour les échanges et la vie sociale.", icon: Church },
-                    { label: 'Hand Plan', content: "Un tracé précis incluant Insula, Domus et Villa l'Orangerie.", icon: Info },
-                ]
-            }
-        ]
-    },
     {
         id: 'hebergement',
         title: 'HÉBERGEMENT',

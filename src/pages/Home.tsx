@@ -55,7 +55,7 @@ const Home = () => {
                             transition={{ duration: 0.8, delay: 1.5 }}
                         >
                             <Link
-                                to="/concept"
+                                to="/hebergement"
                                 className="inline-flex items-center gap-6 px-12 py-6 bg-primary text-white font-black text-xs tracking-[0.4em] uppercase transition-all hover:bg-antique-text hover:shadow-[0_20px_50px_rgba(174,68,56,0.3)] group"
                             >
                                 Commencer l'immersion
@@ -129,11 +129,10 @@ const Home = () => {
                 </div>
                 <div className="container-custom grid md:grid-cols-2 lg:grid-cols-5 gap-8">
                     {[
-                        { id: 'concept', title: 'Le Microcosme', img: '/assets/slide_plan.jpg', part: 'I' },
-                        { id: 'hebergement', title: 'Hébergement', img: '/assets/room_suite.jpg', part: 'II' },
-                        { id: 'restauration', title: 'La Tavola', img: '/assets/la_tavola_mosaic.jpg', part: 'III' },
-                        { id: 'detente', title: 'Thermes & Théâtre', img: '/assets/thermes_view.jpg', part: 'IV' },
-                        { id: 'organigramme', title: 'Organigramme', img: '/assets/slide_hero.jpg', part: 'V' },
+                        { id: 'hebergement', title: 'Hébergement', img: '/assets/room_suite.jpg', part: 'I' },
+                        { id: 'restauration', title: 'La Tavola', img: '/assets/la_tavola_mosaic.jpg', part: 'II' },
+                        { id: 'detente', title: 'Thermes & Théâtre', img: '/assets/thermes_view.jpg', part: 'III' },
+                        { id: 'organigramme', title: 'Organigramme', img: '/assets/slide_hero.jpg', part: 'IV' },
                     ].map((item, idx) => (
                         <Link
                             key={item.id}
